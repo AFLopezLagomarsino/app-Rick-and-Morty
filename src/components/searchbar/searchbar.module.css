@@ -1,0 +1,9 @@
+.Busqueda{
+    display: flex;
+    justify-content: flex-end;
+}
+.Busqueda input{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,76 @@
+@font-face{
+    font-family: "rickimartin";
+    src:  url(/src/fuentes/get_schwifty-webfont.woff2) format('woff2')
+    }
+.Carta {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-style:groove;
+    font-family:'Segoe UI';
+    border-radius: 2%;
+    background-image: url(./portal.png);
+    background-position: center;
+    align-items: center;
+    flex-basis: 20rem;
+    margin: 1rem
+}
+.Carta img {
+    border-radius:80%;
+    width: 90%;
+}
+.Carta h2{
+    text-align: center;
+    font-size: x-large;
+    color: #8505ee;
+    font-family: "rickimartin";
+    font-size: 2.5rem;
+    -webkit-text-stroke: 0.6px rgb(70, 85, 2);
+}
+.Carta h3{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    margin-top: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.Carta button{
+align-self: flex-end;
+text-transform: uppercase;
+text-decoration: none;
+color: rgb(27, 27, 27);
+padding: 5px 5px;
+border: 1px solid;
+border-radius: 1000px;
+display: inline-block;
+transition: all .5s;
+position: relative;
+background-color:yellowgreen;
+}
+.Carta button:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+}
+
+.Carta button:active {
+transform: translateY(-3px);
+}
+
+.Carta button::after {
+content: "";
+display: inline-block;
+height: 100%;
+width: 100%;
+border-radius: 100px;
+top: 0;
+left: 0;
+position: absolute;
+z-index: -1;
+transition: all .3s;
+}
+
+.Carta button:hover::after {
+background-color: rgb(255, 0, 0);
+transform: scaleX(1.4) scaleY(1.5);
+opacity: 0;
+}

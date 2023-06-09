@@ -1,0 +1,24 @@
+@font-face{
+font-family: "rickimartin";
+src:  url('../src/fuentes/get_schwifty-webfont.woff2') format('woff2')
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.App h1{
+    color:#69C8ECFF;
+    -webkit-text-stroke: 0.1px rgb(103, 151, 6);
+    text-shadow: 0px 0px 30px black;
+    font-family: "rickimartin";
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
