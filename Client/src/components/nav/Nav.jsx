@@ -5,7 +5,7 @@ import style from "./Nav.module.css"
 import { useState, useEffect } from "react";
 
 function Nav(props){
-    const[mostrarBusqueda,setMostrarBusqueda] = useState(false)
+    const [mostrarBusqueda,setMostrarBusqueda] = useState(false)
     const location = useLocation()
 
     useEffect(() =>{
@@ -19,7 +19,7 @@ function Nav(props){
 
   return (
         <div className={style.nav}>
-           {mostrarBusqueda && <SearchBar onSearch = {props.onSearch}/> } 
+           {mostrarBusqueda && <SearchBar onSearch = {props.onSearch} random={props.random}/> } 
           <div>
             <Link to ="/about">
                 <button className="botonAbout">about</button>

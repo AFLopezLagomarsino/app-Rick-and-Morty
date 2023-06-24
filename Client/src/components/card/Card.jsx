@@ -8,6 +8,7 @@ import style from './card.module.css'
 function Card(props) {
    const navigate = useNavigate()
    const {character, onClose, addFav, removeFav, favorites} = props;
+   const {image, name, id} = character
    const [isFav, setFav] = useState(false)
    const [closeBtn, setCloseBtn] = useState(true)
 
@@ -24,11 +25,11 @@ function Card(props) {
    
    useEffect(() => {
       favorites.forEach((fav) => {
-         if (fav.id === props.id) {
-            setFav(true);
+         if (fav.id === id) {
+            setFav(true)
          }
-      });
-   }, [favorites]);
+      })
+   },[favorites])
    
 
    function handlerFavorite(character){
@@ -45,8 +46,8 @@ function Card(props) {
    return (
       <div className={style.Carta}>
          {closeBtn && <button onClick={() => {onClose(character.id);}}>X</button>}
-         <h2>{character.name}</h2>
-         <img src={character.image} alt= {character.name} onClick={navigateHandler}/>
+         <h2>{name}</h2>
+         <img src={image} alt= {name} onClick={navigateHandler}/>
 
          {isFav ? (<button onClick={() => handlerFavorite(character.id)}>❤️</button>) 
          :(<button onClick={() => handlerFavorite(character)}>🤍</button>)

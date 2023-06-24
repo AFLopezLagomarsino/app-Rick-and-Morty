@@ -7,7 +7,7 @@ export default function Favorites(){
 
 
 const dispatch = useDispatch()
-const favorites = useSelector(state => state.myfavorites)
+const favorites = useSelector((state) => state.myfavorites)
 
 function handleSort (e) {
     dispatch(order(e.target.value))
@@ -23,17 +23,17 @@ function handleReset(){
         <div>
 {/* esto permite generar una opcion por cada elemento del array (sirve para cuando hay muchas opciones de filtrado) */}
         <select placeholder="Gender" onChange={handleFilter}>
-            {["Male", "Female", "unknown", "Genderless"].map(gender =>
-                <option value={gender}>{gender}</option>)}
+            {["Male", "Female", "unknown", "Genderless"].map((gender) =>
+               ( <option value={gender}>{gender}</option>))}
         </select>
 
         <select placeholder="Orden" onChange={handleSort}>
-                {["Ascendente", "Descendente"].map(gender =>
-                <option value={gender}>{gender}</option>)}
+                {["Ascendente", "Descendente"].map((gender) =>
+                (<option value={gender}>{gender}</option>))}
 
         </select>
 
-        <button onClick={handleReset}>Reset Filter</button>
+        <button onClick={handleReset}>Reset Filters</button>
 
 
             <Cards characters = {favorites}/>

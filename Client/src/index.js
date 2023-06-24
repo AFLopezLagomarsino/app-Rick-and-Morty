@@ -11,6 +11,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
   <Provider store = {store}>
   <BrowserRouter>
   <App />
-  </BrowserRouter>,
+  </BrowserRouter>
   </Provider>
 )
