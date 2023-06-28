@@ -18,8 +18,10 @@
 const express = require("express")
 const server = require ("./App")
 const PORT = 3001;
+const { conn } = require("./DB_connection")
 
 server.listen(PORT, ()=> {
+    conn.sync({force:true})
     console.log(`Server corriendo en el puerto ${PORT}`)
 })
 
