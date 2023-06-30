@@ -23,7 +23,7 @@ function Detail(){
             });
           return setCharacter({});
         }, [id]);
-    
+    //bug arreglado en origin
      return (
     <div className={style.Detalles}>
         
